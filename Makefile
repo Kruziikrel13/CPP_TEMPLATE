@@ -16,6 +16,10 @@ all:
 	$(MAKE) clear
 	$(MAKE) release
 
+nix:
+	echo "use nix" > .envrc
+	direnv allow
+
 asan:
 	cmake --no-warn-unused-cli -DCMAKE_BUILD_TYPE:STRING=Debug -DWITH_ASAN:STRING=True -S . -B ./build
 	cmake --build ./build --config Debug --target all
