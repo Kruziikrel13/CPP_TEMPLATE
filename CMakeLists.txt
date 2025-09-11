@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.30)
 
 # Get version
 file(READ "${CMAKE_SOURCE_DIR}/VERSION" VER_RAW)
@@ -29,6 +29,8 @@ add_compile_options(
 set(CMAKE_EXECUTABLE_ENABLE_EXPORTS TRUE)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+## Add Targets Here
+
 if(CMAKE_BUILD_TYPE MATCHES Debug OR CMAKE_BUILD_TYPE MATCHES DEBUG)
   message(STATUS "Configuring ${PROJECT_NAME} in Debug with CMake")
 
@@ -46,4 +48,4 @@ else()
   message(STATUS "Configuring ${PROJECT_NAME} in Release with CMake")
 endif()
 
-include_directories(. "src/")
+## Link additional libraries here
