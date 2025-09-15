@@ -48,4 +48,5 @@ else()
   message(STATUS "Configuring ${PROJECT_NAME} in Release with CMake")
 endif()
 
-## Link additional libraries here
+find_package(spdlog REQUIRED)
+target_link_libraries(${PROJECT_NAME} PRIVATE spdlog::spdlog)
