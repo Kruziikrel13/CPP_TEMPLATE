@@ -29,7 +29,7 @@ add_compile_options(
 set(CMAKE_EXECUTABLE_ENABLE_EXPORTS TRUE)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-## Add Targets Here
+add_executable(${PROJECT_NAME} src/main.cpp)
 
 if(CMAKE_BUILD_TYPE MATCHES Debug OR CMAKE_BUILD_TYPE MATCHES DEBUG)
   message(STATUS "Configuring ${PROJECT_NAME} in Debug with CMake")
