@@ -21,3 +21,6 @@ make all
 ```sh
 make debug
 ```
+
+## References
+- [hyprwm/hyprland](https://github.com/hyprwm/Hyprland) reference for build system.
